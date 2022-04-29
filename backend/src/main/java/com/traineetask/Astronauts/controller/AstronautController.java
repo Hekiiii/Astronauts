@@ -7,9 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -27,7 +25,6 @@ public class AstronautController {
 
     @PostMapping("astronauts")
     public ResponseEntity<?> saveAstronaut(@RequestBody AstronautModel astronautModel) {
-        //astronautModel.setBirthdate(LocalDateTime.now());
         return new ResponseEntity<>(astronautService.saveAstronaut(astronautModel), HttpStatus.CREATED);
     }
 

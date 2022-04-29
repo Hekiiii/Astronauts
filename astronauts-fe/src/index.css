@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.add-icon {
+  color: dodgerblue;
+}
+
+.add-icon:hover {
+  color: blue;
+}
+
+.edit-icon {
+  color: orange;
+}
+
+.edit-icon:hover {
+  color: darkorange;
+}
+
+.delete-icon {
+  color: red;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}

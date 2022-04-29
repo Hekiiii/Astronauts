@@ -5,6 +5,7 @@ import { SaveAstronaut } from "./saveAstronaut";
 import { DeleteAstronaut } from "./deleteAstronaut";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 
 const AstronautsPage = () => {
@@ -72,7 +73,7 @@ const AstronautsPage = () => {
                                 </div>
 
                                 <div className="col-6 text-end" >
-                                    <FontAwesomeIcon icon={faPlus} className="fa-2xl" onClick={() => addAdstonautRequest()} />
+                                    <FontAwesomeIcon icon={faPlus} className="fa-2xl add-icon"  onClick={() => addAdstonautRequest()} />
                                 </div>
                             </div>
                         </div>
@@ -94,8 +95,8 @@ const AstronautsPage = () => {
                                         <td>{item.birthdate}</td>
                                         <td>{item.superpower}</td>
                                         <td>
-                                            <FontAwesomeIcon icon={faPenToSquare} className="fa-xl" onClick={() => editAstronautRequest(item)} />
-                                            <FontAwesomeIcon icon={faTrash} className="px-3 fa-xl" onClick={() => deleteAstronautRequest(item)} />
+                                            <FontAwesomeIcon icon={faPenToSquare} className="fa-xl edit-icon" onClick={() => editAstronautRequest(item)} />
+                                            <FontAwesomeIcon icon={faTrash} className="px-3 fa-xl delete-icon" onClick={() => deleteAstronautRequest(item)} />
                                         </td>
                                     </tr>
                                     )}

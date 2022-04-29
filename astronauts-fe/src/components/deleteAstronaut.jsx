@@ -20,17 +20,17 @@ const DeleteAstronaut = forwardRef((props, ref) => {
     return (
         <Modal show={show}>
             <div className="modal-header">
-                <h5 className="modal-title">Potvrzení</h5>
+                <h5 className="modal-title">Odstranit</h5>
                 <button type="button" className="btn-close" onClick={() => setShow(false)}></button>
             </div>
 
             <div className="modal-body">
-                Opravdu smazat?
+                Opravdu si přejete astronauta odstranit?
             </div>
 
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" onClick={() => setShow(false)}>Zrušit</button>
-                <button type="button" className="btn btn-danger" onClick={() => deleteAstronaut()}>Smazat</button>
+                <button type="button" className="btn btn-danger" onClick={() => deleteAstronaut()}>Odstranit</button>
             </div>
         </Modal>
     );
